@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --amarelo: #ffeb70;
+  --cinza: #2f2f2f;
+  --preto: #0e0e0e;
+  --branco: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--cinza);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+}
+
+header h1 {
+  color: var(--amarelo);
+  font-weight: 600;
+}
+
+nav a {
+  color: var(--branco);
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--amarelo);
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--amarelo);
+  margin-bottom: 1rem;
+}
+
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.projeto {
+  background-color: var(--cinza);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 235, 112, 0.2);
+  transition: transform 0.3s;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+}
+
+.projeto a {
+  color: var(--amarelo);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--amarelo);
+  color: var(--preto);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+li a {
+  color: var(--amarelo);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--cinza);
+  color: var(--branco);
+}
+
+/* Efeito de fade */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
